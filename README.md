@@ -30,7 +30,7 @@ Nyra is an AI-powered assistant capable of reading and understanding documents. 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/nyra-ai-assistant.git
+git clone https://github.com/asoron/nyra-ai-assistant.git
 cd nyra-ai-assistant
 ```
 
