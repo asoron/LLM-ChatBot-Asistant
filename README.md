@@ -16,4 +16,4 @@ This project is an LLM (Large Language Model) based chatbot assistant applicatio
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/asoron/LLM-ChatBot-Asistant.git
