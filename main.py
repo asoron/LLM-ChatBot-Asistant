@@ -1,6 +1,7 @@
 from utils.model import initialize_model, generate_response
 from utils.intents import recognize_intent, INTENT_ACTIONS
-from utils.utils import update_context, Template
+from utils.utils import Template
+from utils.readDocument import load_documents
 
 def handle_conversation():
     global context
@@ -23,9 +24,9 @@ def handle_conversation():
         if action:
             action()
         else:
-            answer = generate_response(model, Template, context, question)
+            answer = generate_response(model, Template, question)
             print("Nyra: " + answer)
-            context = update_context(context, question, answer)
 
 if __name__ == "__main__":
+    load_documents()
     handle_conversation()

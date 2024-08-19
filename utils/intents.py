@@ -1,5 +1,6 @@
 import webbrowser
 from utils.spotify import *
+from utils.readDocument import *
 import warnings
 import datetime
 import pickle
@@ -51,6 +52,7 @@ def shutdown_computer():
 def restart_computer():
     print("Nyra: Restarting the computer...")
     os.system('shutdown /r /t 1')
+    
 
 INTENT_ACTIONS = {
     "open_google": lambda: open_website("https://www.google.com"),
@@ -69,10 +71,19 @@ INTENT_ACTIONS = {
     "resume_music": resume_music,
     "next_track": next_track,
     "previous_track": previous_track,
-    "play_playlist": play_playlist 
+    "play_playlist": play_playlist ,
+    "answer_from_document": answer_from_documents
+
 }
 
 
 def recognize_intent(question):
     intent = model.predict([question.lower().strip()])[0]
-    return INTENT_ACTIONS.get(intent, None)
+    
+    if intent in INTENT_ACTIONS:
+        confidence = model.predict_proba([question.lower().strip()])[0].max()
+        if confidence > 0.25:
+            return INTENT_ACTIONS.get(intent, None)
+    
+    return None 
+

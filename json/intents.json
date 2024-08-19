@@ -168,6 +168,18 @@
         "start playlist",
         "play my playlist"
       ]
+    },
+    {
+      "intent": "answer_from_document",
+      "utterances": [
+        "answer from document",
+        "can you read the document",
+        "please answer from this document",
+        "read from the document",
+        "answer a question from the document",
+        "what does the document say",
+        "can you check the document"
+      ]
     }
   ]
 }

@@ -1,9 +1,9 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="your-spotify-client-id",
-                                               client_secret="your-spotify-client-secret",
-                                               redirect_uri="your-redirect-uri",
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="0ec0bab6b927427dad23f2cf4e49ec9c",
+                                               client_secret="91457a8f71f844b892f2a8148f78120c",
+                                               redirect_uri="http://localhost:8888/callback",
                                                scope="user-modify-playback-state user-read-playback-state"))
 
 def get_active_device():
