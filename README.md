@@ -55,6 +55,74 @@ export SPOTIPY_REDIRECT_URI='your-redirect-uri'
 
 ## Usage
 
+## Using the LangChain Ollama Llama 3.1:8B Model
+
+This project harnesses the power of the **LangChain Ollama Llama 3.1:8B** model to deliver advanced natural language processing capabilities. The model is pivotal in generating accurate, contextually aware responses for both document-based queries and general conversational interactions.
+
+### **Model Overview**
+
+- **Model Name**: Llama 3.1:8B
+- **Architecture**: Derived from the Llama family, known for its balance between performance and accuracy.
+- **Parameter Count**: 8 billion parameters, offering a robust model that excels in both computational efficiency and response quality.
+
+### **Integration with LangChain**
+
+The Llama 3.1:8B model is seamlessly integrated into this project using the **LangChain** framework, which simplifies the deployment of large language models (LLMs) across various applications. LangChain provides a streamlined interface that makes it straightforward to leverage the capabilities of Llama 3.1:8B for complex tasks such as document analysis and conversational AI.
+
+### **Key Features**
+
+- **Document-Based Q&A**: Nyra can answer questions by thoroughly analyzing and understanding the content across multiple documents. This feature is ideal for situations requiring in-depth, context-specific answers.
+- **Conversational AI**: The model adeptly manages free-flowing conversations, providing responses that are both informative and relevant to the context of the discussion.
+
+### **How It Works**
+
+1. **Model Initialization**  
+   The Llama 3.1:8B model is initialized at the program's start, using the `OllamaLLM` class from the `langchain_ollama` package. This setup is optimized for CUDA devices, ensuring efficient performance.
+
+    ```python
+    from langchain_ollama import OllamaLLM
+    
+    def initialize_model():
+        return OllamaLLM(model="llama3", device="cuda")
+    ```
+
+2. **Generating Responses**  
+   Nyra generates responses by processing user queries and document content through the model. The responses are crafted to be precise and contextually relevant.
+
+    ```python
+    def generate_response(model, template, question):
+        prompt = template.format(question=question)
+        try:
+            answer = model(prompt).strip()
+        except Exception as e:
+            answer = "Sorry, something went wrong. Please try again."
+        return answer
+    ```
+
+3. **Document-Based Question Answering**  
+   The model excels at answering questions derived from document content. It processes the combined text from all loaded documents and generates answers based on the provided context.
+
+    ```python
+    def answer_question_from_text(question, context):
+        prompt = f"Answer the following question based on the provided context:\\n\\nContext: {context}\\n\\nQuestion: {question}\\n\\nAnswer:"
+        answer = model(prompt)
+        return answer.strip()
+    ```
+
+### **Benefits**
+
+- **High Precision**: The Llama 3.1:8B model delivers highly precise answers, making it suitable for addressing complex and nuanced queries.
+- **Performance Optimization**: Despite its extensive parameter count, the model is optimized for GPU performance, ensuring rapid response times.
+- **Versatility**: The model's architecture allows it to handle a wide range of queries, from straightforward questions to more intricate, document-based inquiries.
+
+### **System Requirements**
+
+To effectively utilize the Llama 3.1:8B model, ensure that your system is equipped with a compatible GPU capable of handling high computational loads. The model initialization relies on CUDA, making it ideal for high-performance computing environments.
+
+### **Conclusion**
+
+The integration of the LangChain Ollama Llama 3.1:8B model elevates Nyra’s capabilities, enabling it to deliver accurate, context-sensitive responses across various use cases. Whether answering questions based on extensive document content or managing dynamic conversations, this model provides a robust foundation for advanced natural language processing tasks.
+
 ### Starting the Assistant
 
 To start Nyra, simply run the `start.py` script:
