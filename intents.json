@@ -1,0 +1,173 @@
+{
+  "intents": [
+    {
+      "intent": "open_google",
+      "utterances": [
+        "open google",
+        "can you open google",
+        "please open google",
+        "launch google",
+        "start google"
+      ]
+    },
+    {
+      "intent": "open_youtube",
+      "utterances": [
+        "open youtube",
+        "can you open youtube",
+        "please open youtube",
+        "launch youtube",
+        "start youtube"
+      ]
+    },
+    {
+      "intent": "clear_context",
+      "utterances": [
+        "clear context",
+        "reset context",
+        "clear history",
+        "delete history",
+        "start over"
+      ]
+    },
+    {
+      "intent": "tell_time",
+      "utterances": [
+        "what time is it",
+        "tell me the time",
+        "current time",
+        "what's the time",
+        "time now"
+      ]
+    },
+    {
+      "intent": "open_github",
+      "utterances": [
+        "open github",
+        "can you open github",
+        "please open github",
+        "launch github",
+        "start github"
+      ]
+    },
+    {
+      "intent": "search_google",
+      "utterances": [
+        "search on google",
+        "google search",
+        "can you search google",
+        "please search google",
+        "look up on google"
+      ]
+    },
+    {
+      "intent": "set_timer",
+      "utterances": [
+        "set a timer",
+        "can you set a timer",
+        "please set a timer",
+        "start a timer",
+        "create a timer"
+      ]
+    },
+    {
+      "intent": "open_calculator",
+      "utterances": [
+        "open calculator",
+        "can you open calculator",
+        "please open calculator",
+        "launch calculator",
+        "start calculator"
+      ]
+    },
+    {
+      "intent": "open_notepad",
+      "utterances": [
+        "open notepad",
+        "can you open notepad",
+        "please open notepad",
+        "launch notepad",
+        "start notepad"
+      ]
+    },
+    {
+      "intent": "shutdown_computer",
+      "utterances": [
+        "shutdown computer",
+        "can you shutdown computer",
+        "please shutdown computer",
+        "turn off computer",
+        "power down computer"
+      ]
+    },
+    {
+      "intent": "restart_computer",
+      "utterances": [
+        "restart computer",
+        "can you restart computer",
+        "please restart computer",
+        "reboot computer",
+        "reboot system"
+      ]
+    },{
+      "intent": "play_song",
+      "utterances": [
+        "play song",
+        "can you play song",
+        "please play song",
+        "start song",
+        "play music"
+      ]
+    },
+    {
+      "intent": "pause_music",
+      "utterances": [
+        "pause music",
+        "can you pause music",
+        "please pause music",
+        "stop music",
+        "pause the song"
+      ]
+    },
+    {
+      "intent": "resume_music",
+      "utterances": [
+        "resume music",
+        "can you resume music",
+        "please resume music",
+        "continue music",
+        "play the song again"
+      ]
+    },
+    {
+      "intent": "next_track",
+      "utterances": [
+        "next track",
+        "skip song",
+        "can you skip song",
+        "please skip song",
+        "next song"
+      ]
+    },
+    {
+      "intent": "previous_track",
+      "utterances": [
+        "previous track",
+        "go back to the previous song",
+        "can you play the previous song",
+        "play the last song",
+        "go back one song"
+      ]
+    },
+    {
+      "intent": "play_playlist",
+      "utterances": [
+        "play playlist",
+        "can you play playlist",
+        "please play playlist",
+        "start playlist",
+        "play my playlist"
+      ]
+    }
+  ]
+}
